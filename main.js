@@ -1,9 +1,6 @@
 (function() {
-  canvas = document.getElementById('cog');
-
-  window.cog = {};
-	cog.engine = new Joy.Engine({
-	  debug: true,
-	  canvas: canvas
-	});
-}());
+  setTimeout(function() {
+    cog.createSceneFactory();
+    cog.engine.gotoNextScene(0, "#000");
+  }, 3000);
+})();

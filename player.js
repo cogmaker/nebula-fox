@@ -18,4 +18,4 @@
   player.scale.set(0.07, 0.07);
 
   cog.player = player;
-}());
+})();
