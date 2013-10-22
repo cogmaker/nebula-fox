@@ -19,7 +19,7 @@
 	    }
 	  });
 
-	  var spriteUrl = "cog-logo.png";
+	  var spriteUrl = "assets/cog-logo.png";
 	  var spriteSmall = new Joy.Sprite({
 	    x: 10,
 	    y: 10,

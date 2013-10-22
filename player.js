@@ -1,10 +1,9 @@
 (function() {
-  var spriteUrl = "cog.png";
-
   var player = new Joy.Sprite({
     x: 10,
     y: 40,
-    src: spriteUrl
+    name: "player",
+    src: "assets/cog.png"
   }).bind('load', function() {
     // Change pivot to center
     this.pivot.x = 0,
