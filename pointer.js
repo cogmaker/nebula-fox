@@ -18,6 +18,13 @@
     }
   });
 
+  Joy.Behaviour.define('SkipIntro', {
+    // On click
+    CLICK: function(e) {
+      cog.startSceneFactory();
+    }
+  });
+
   var lecarton_utterance = new Joy.Sound({
     urls: ['assets/le-carton.wav']
   });

@@ -19,6 +19,11 @@
 	    }
 	  });
 
+    var background = new Joy.Rect({
+      width: cog.engine.width,
+      height: cog.engine.height
+    }).behave('Button, SkipIntro');
+
 	  var spriteUrl = "assets/cog-logo.png";
 	  var spriteSmall = new Joy.Sprite({
 	    x: 10,
@@ -49,6 +54,7 @@
 	  spriteBig.speed = 0.5;
 	  spriteBig.scale.set(2, 2);
 
+	  scene.addChild(background);
 	  scene.addChild(spriteBig);
 	  scene.addChild(spriteNormal);
 	  scene.addChild(spriteSmall);
