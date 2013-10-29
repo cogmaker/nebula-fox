@@ -9,7 +9,7 @@
         this.pivot.x = (this.width / 2);
         this.pivot.y = (this.height / 2);
         // Add clickable behaviour
-      }).behave('Button, ClickScene');
+      });
 
       var carton = new Joy.Sprite({
         x: 600,
@@ -22,6 +22,7 @@
       }).behave('Button, ClickProp');
 
       scene.addChild(background);
+      cog.layer.init(scene);
       scene.addChild(carton);
       scene.addChild(cog.player);
 

@@ -3,7 +3,7 @@
 
   window.cog = {};
 	cog.engine = new Joy.Engine({
-	  debug: true,
+	  debug: false,
 	  canvas: canvas
 	});
 }());
