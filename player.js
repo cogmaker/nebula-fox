@@ -14,7 +14,7 @@
   player.hDir = 1;
   player.vDir = 1;
   player.speed = 3;
-  player.scale.set(0.07, 0.07);
+  player.scale.set(cog.config.playerSpriteScale, cog.config.playerSpriteScale);
 
   cog.player = player;
 })();

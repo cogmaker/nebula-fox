@@ -7,13 +7,25 @@
       this.locked = true;
       var that = this;
 
+      var complete = function () {
+        that.locked = false;
+      }
+
+      var completions = 0;
       new Joy.Tween(cog.player.position).to({
         x: e.x - cog.player.width/2 - 10,
-        y: that.position.y - cog.player.height + cog.engine.height/numRects
-      })
-      .easing(Joy.TweenManager.Easing.Sinusoidal.InOut)
-      .start()
-      .onComplete(function () { that.locked = false; });
+        y: that.position.y - (that.scaleRatio * cog.config.playerSpriteScale)
+          + cog.engine.height/numRects
+      }).easing(Joy.TweenManager.Easing.Sinusoidal.InOut)
+        .start()
+
+      new Joy.Tween(cog.player.scale).to({
+        x: cog.config.playerSpriteScale * that.scaleRatio,
+        y: cog.config.playerSpriteScale * that.scaleRatio
+      }, 2000).easing( Joy.TweenManager.Easing.Exponential.Out )
+        .start()
+        .onComplete(complete);
+
     }
   });
 
