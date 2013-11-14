@@ -12,8 +12,8 @@
       }
 
       var playerScaledHeight = parseInt(this.scaleRatio * cog.config.playerSpriteScale * cog.player.originalHeight);
+console.log(this.scaleRatio, cog.config.playerSpriteScale, cog.player.originalHeight, playerScaledHeight);
       var completions = 0;
-
       new Joy.Tween(cog.player.position).to({
         x: e.x - cog.player.width/2 - 10,
         y: that.position.y + cog.engine.height/numRects - playerScaledHeight	  

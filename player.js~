@@ -8,7 +8,7 @@
     // Change pivot to center
     this.pivot.x = 0,
     this.pivot.y = 0
-    this.originalHeight = 800;
+    this.originalHeight = this.height;
   });
 
   player.hDir = 1;
